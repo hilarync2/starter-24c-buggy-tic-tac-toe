@@ -26,11 +26,11 @@ bool MakeMove(std::vector<std::vector<char>>& board,
     std::cerr << "Error: Move out of bounds!\n";
     return false;
   }
-  if (board[col][row] != ' ') {
+  if (board[row][col] != ' ') { // easy to spot, variable names swapped around
     std::cerr << "Error: Cell already occupied!\n";
     return false;
   }
-  board[col][row] = player;
+  board[row][col] = player; // same as above
   return true;
 }
 
